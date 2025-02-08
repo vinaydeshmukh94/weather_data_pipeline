@@ -53,7 +53,7 @@ def plot_animated_weather_map(df):
     ).add_to(weather_map)
 
     # Save animated map
-    weather_map.save("animated_weather_map.html")
+    weather_map.save("weather_map.html")
     print("✅ Animated Weather Map saved as 'weather_map.html'.")
 
 if __name__ == "__main__":
