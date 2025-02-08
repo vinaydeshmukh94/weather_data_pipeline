@@ -21,10 +21,47 @@ def fetch_weather_data(location):
         return None
 
 def save_to_db(data):
-    """Flattens JSON and saves weather data to SQLite."""
+    """Flattens JSON, removes duplicates, and saves weather data to SQLite."""
     conn = sqlite3.connect(DB_FILE)
-    df = pd.json_normalize(data)
-    df.to_sql("weather", conn, if_exists="append", index=False)
+
+    # Create table if not exists
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS weather (
+            city TEXT,
+            country TEXT,
+            temp_c REAL,
+            humidity INTEGER,
+            wind_kph REAL,
+            last_updated TEXT,
+            PRIMARY KEY (city, last_updated)  -- Prevent duplicates
+        )
+    """)
+    conn.commit()
+
+    # Extract only necessary fields
+    records = []
+    for item in data:
+        if "current" in item and "location" in item:
+            records.append({
+                "city": item["location"]["name"],
+                "country": item["location"]["country"],
+                "temp_c": item["current"].get("temp_c", None),
+                "humidity": item["current"].get("humidity", None),
+                "wind_kph": item["current"].get("wind_kph", None),
+                "last_updated": item["current"].get("last_updated", None)
+            })
+
+    # Convert to DataFrame
+    df = pd.DataFrame(records)
+
+    # Remove duplicates within the DataFrame before inserting
+    df.drop_duplicates(subset=["city", "last_updated"], keep="last", inplace=True)
+
+    # Insert into SQLite (duplicates will be ignored due to PRIMARY KEY)
+    if not df.empty:
+        df.to_sql("weather", conn, if_exists="append", index=False)
+
     conn.close()
 
 if __name__ == "__main__":
