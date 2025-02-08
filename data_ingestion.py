@@ -60,11 +60,12 @@ def save_to_db(data):
 
     # Insert into SQLite (duplicates will be ignored due to PRIMARY KEY)
     if not df.empty:
-        df.to_sql("weather", conn, if_exists="append", index=False)
+        df.to_sql("weather", conn, if_exists="replace", index=False)
 
     conn.close()
 
-if __name__ == "__main__":
+
+def fetch_and_save_data():
     all_weather_data = []
 
     for location in LOCATIONS:
@@ -77,3 +78,6 @@ if __name__ == "__main__":
     if all_weather_data:
         save_to_db(all_weather_data)
         print("✅ Weather data saved successfully!")
+    
+if __name__ == "__main__":
+    fetch_and_save_data()
