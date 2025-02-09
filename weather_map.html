@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a476ee3872630e38043039d4ab55421c {
+                #map_2bea17989f3ccab83fe6914e58c50f0d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -46,14 +46,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_a476ee3872630e38043039d4ab55421c" ></div>
+            <div class="folium-map" id="map_2bea17989f3ccab83fe6914e58c50f0d" ></div>
         
 </body>
 <script>
     
     
-            var map_a476ee3872630e38043039d4ab55421c = L.map(
-                "map_a476ee3872630e38043039d4ab55421c",
+            var map_2bea17989f3ccab83fe6914e58c50f0d = L.map(
+                "map_2bea17989f3ccab83fe6914e58c50f0d",
                 {
                     center: [20.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -70,7 +70,7 @@
 
         
     
-            var tile_layer_845d3bf605d7d8ee6ca67c4c770a704e = L.tileLayer(
+            var tile_layer_685b00589518bf709259157419db0176 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -87,7 +87,7 @@
             );
         
     
-            tile_layer_845d3bf605d7d8ee6ca67c4c770a704e.addTo(map_a476ee3872630e38043039d4ab55421c);
+            tile_layer_685b00589518bf709259157419db0176.addTo(map_2bea17989f3ccab83fe6914e58c50f0d);
         
     
             L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
@@ -97,7 +97,7 @@
                     return newdate.format("YYYY-MM-DD HH:mm:ss");
                 }
             });
-            map_a476ee3872630e38043039d4ab55421c.timeDimension = L.timeDimension(
+            map_2bea17989f3ccab83fe6914e58c50f0d.timeDimension = L.timeDimension(
                 {
                     period: "PT1H",
                 }
@@ -118,9 +118,9 @@
 },
 }
             );
-            map_a476ee3872630e38043039d4ab55421c.addControl(this.timeDimensionControl);
+            map_2bea17989f3ccab83fe6914e58c50f0d.addControl(this.timeDimensionControl);
 
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.0060152, 40.7127281]}, "properties": {"time": "2025-02-08 04:15", "popup": "New York, United States of America<br>Temp: -3.3\u00b0C<br>Humidity: 38%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.14405508452768728, 51.4893335]}, "properties": {"time": "2025-02-08 09:15", "popup": "London, United Kingdom<br>Temp: 4.0\u00b0C<br>Humidity: 100%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [139.7638947, 35.6768601]}, "properties": {"time": "2025-02-08 18:15", "popup": "Tokyo, Japan<br>Temp: 6.4\u00b0C<br>Humidity: 42%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [151.2082848, -33.8698439]}, "properties": {"time": "2025-02-08 20:15", "popup": "Sydney, Australia<br>Temp: 25.3\u00b0C<br>Humidity: 74%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [72.8692035, 19.054999]}, "properties": {"time": "2025-02-08 14:45", "popup": "Mumbai, India<br>Temp: 33.2\u00b0C<br>Humidity: 36%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.3483915, 48.8534951]}, "properties": {"time": "2025-02-08 10:15", "popup": "Paris, France<br>Temp: 4.4\u00b0C<br>Humidity: 87%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.3989367, 52.510885]}, "properties": {"time": "2025-02-08 10:15", "popup": "Berlin, Germany<br>Temp: 2.3\u00b0C<br>Humidity: 69%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.3839347, 43.6534817]}, "properties": {"time": "2025-02-08 04:15", "popup": "Toronto, Canada<br>Temp: -5.7\u00b0C<br>Humidity: 68%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.242766, 34.0536909]}, "properties": {"time": "2025-02-08 01:15", "popup": "Los Angeles, United States of America<br>Temp: 10.6\u00b0C<br>Humidity: 89%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [55.18853865430702, 25.074282349999997]}, "properties": {"time": "2025-02-08 13:15", "popup": "Dubai, United Arab Emirates<br>Temp: 27.0\u00b0C<br>Humidity: 48%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [116.412144, 40.190632]}, "properties": {"time": "2025-02-08 17:15", "popup": "Beijing, China<br>Temp: -0.9\u00b0C<br>Humidity: 13%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.6063916, 55.625578]}, "properties": {"time": "2025-02-08 12:15", "popup": "Moscow, Russia<br>Temp: -3.7\u00b0C<br>Humidity: 86%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-46.6333824, -23.5506507]}, "properties": {"time": "2025-02-08 06:15", "popup": "San Paulo, Brazil<br>Temp: 22.4\u00b0C<br>Humidity: 88%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.4172197, -33.9288301]}, "properties": {"time": "2025-02-08 11:15", "popup": "Cape Town, South Africa<br>Temp: 22.1\u00b0C<br>Humidity: 60%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [103.8194992, 1.357107]}, "properties": {"time": "2025-02-08 17:15", "popup": "Singapore, Singapore<br>Temp: 31.3\u00b0C<br>Humidity: 55%", "icon": "cloud"}}]}, {
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.0060152, 40.7127281]}, "properties": {"time": "2025-02-09 02:00", "popup": "New York, United States of America<br>Temp: -0.6\u00b0C<br>Humidity: 92%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.14405508452768728, 51.4893335]}, "properties": {"time": "2025-02-09 07:00", "popup": "London, United Kingdom<br>Temp: 0.1\u00b0C<br>Humidity: 100%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [139.7638947, 35.6768601]}, "properties": {"time": "2025-02-09 16:00", "popup": "Tokyo, Japan<br>Temp: 11.3\u00b0C<br>Humidity: 15%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [151.2082848, -33.8698439]}, "properties": {"time": "2025-02-09 18:00", "popup": "Sydney, Australia<br>Temp: 26.3\u00b0C<br>Humidity: 74%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [72.8692035, 19.054999]}, "properties": {"time": "2025-02-09 12:30", "popup": "Mumbai, India<br>Temp: 33.3\u00b0C<br>Humidity: 32%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.3483915, 48.8534951]}, "properties": {"time": "2025-02-09 08:00", "popup": "Paris, France<br>Temp: 5.3\u00b0C<br>Humidity: 100%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.3989367, 52.510885]}, "properties": {"time": "2025-02-09 08:00", "popup": "Berlin, Germany<br>Temp: -2.7\u00b0C<br>Humidity: 86%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.3839347, 43.6534817]}, "properties": {"time": "2025-02-09 01:45", "popup": "Toronto, Canada<br>Temp: -2.8\u00b0C<br>Humidity: 86%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.242766, 34.0536909]}, "properties": {"time": "2025-02-08 23:00", "popup": "Los Angeles, United States of America<br>Temp: 12.2\u00b0C<br>Humidity: 83%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [55.18853865430702, 25.074282349999997]}, "properties": {"time": "2025-02-09 11:00", "popup": "Dubai, United Arab Emirates<br>Temp: 22.1\u00b0C<br>Humidity: 61%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [116.412144, 40.190632]}, "properties": {"time": "2025-02-09 15:00", "popup": "Beijing, China<br>Temp: 1.2\u00b0C<br>Humidity: 13%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.6063916, 55.625578]}, "properties": {"time": "2025-02-09 10:00", "popup": "Moscow, Russia<br>Temp: -3.6\u00b0C<br>Humidity: 86%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-46.6333824, -23.5506507]}, "properties": {"time": "2025-02-09 04:00", "popup": "San Paulo, Brazil<br>Temp: 21.0\u00b0C<br>Humidity: 88%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.4172197, -33.9288301]}, "properties": {"time": "2025-02-09 09:00", "popup": "Cape Town, South Africa<br>Temp: 20.4\u00b0C<br>Humidity: 57%", "icon": "cloud"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [103.8194992, 1.357107]}, "properties": {"time": "2025-02-09 15:00", "popup": "Singapore, Singapore<br>Temp: 30.1\u00b0C<br>Humidity: 66%", "icon": "cloud"}}]}, {
                     pointToLayer: function (feature, latLng) {
                         if (feature.properties.icon == 'marker') {
                             if(feature.properties.iconstyle){
@@ -154,14 +154,14 @@
                     }
                 })
 
-            var timestamped_geo_json_47553163623b2e7b910fc9df08e99858 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_aac1322ca373c882412d19dcc2722d26 = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
                     addlastPoint: true,
                     duration: undefined,
                 }
-            ).addTo(map_a476ee3872630e38043039d4ab55421c);
+            ).addTo(map_2bea17989f3ccab83fe6914e58c50f0d);
         
 </script>
 </html>
