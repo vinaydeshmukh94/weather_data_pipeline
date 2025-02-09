@@ -92,3 +92,6 @@ weather_data_pipeline/
 │-- animated_weather_map.html  # Generated weather map
 │-- README.md           # Project documentation
 ```
+
+## Sample Output:
+![image](https://github.com/user-attachments/assets/6dc31d6c-4fa1-4afa-9415-e90e7b8d0ba1)
